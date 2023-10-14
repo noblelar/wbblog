@@ -5,6 +5,7 @@ import NextAuthProvider from "@/providers/next-auth-provider";
 import NextThemeProvider from "@/providers/theme-provider";
 import GlobalState from "@/context";
 import Header from "../components/header/index";
+import * as React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className=" dark:bg-deep">
         <NextThemeProvider>
           <NextAuthProvider>
             <GlobalState>
