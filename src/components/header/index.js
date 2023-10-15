@@ -99,8 +99,10 @@ export default function Header() {
                 </nav>
               </div>
               <div className="flex gap-4 items-center justify-end pr-4 lg:pr-0 ">
-                <Button onClick={() => {}} text="Create" />
-                <Button onClick={session !== null ? ()=> signOut: () => signIn()} text={session !== null ? "Logout" : "Login"} />
+                {
+                  session !== null ? <Button onClick={() => {}} text="Create" /> : null
+                }
+                <Button onClick={session !== null ? ()=> signOut() : () => signIn()} text={session !== null ? "Logout" : "Login"} />
 
                 <div className="flex gap-4 mx-4 items-center ">
                   <ThemeToggler />

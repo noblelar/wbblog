@@ -11,6 +11,10 @@ export default function Spinner() {
       borderColor="#000"
       barColor="#fff"
       wrapperStyle={{display : "block", margin : "auto" }}
+      
     />
   );
 }
+
+
+
