@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className=" dark:bg-deep">
+      <body className=" dark:bg-dark">
         <NextThemeProvider>
           <NextAuthProvider>
             <GlobalState>
