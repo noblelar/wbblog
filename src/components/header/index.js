@@ -7,11 +7,14 @@ import { menuItems } from "../utils";
 import Button from "../button";
 import ThemeToggler from "@/theme";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [sticky, setSticky] = useState(false);
   const [navbarOpen, setNavbarOpen] = useState(false);
   const {data: session} = useSession();
+  const router = useRouter();
+
 
   console.log(session, 'session')
 
@@ -100,7 +103,7 @@ export default function Header() {
               </div>
               <div className="flex gap-4 items-center justify-end pr-4 lg:pr-0 ">
                 {
-                  session !== null ? <Button onClick={() => {}} text="Create" /> : null
+                  session !== null ? <Button onClick={() => router.push('/create')} text="Create" /> : null
                 }
                 <Button onClick={session !== null ? ()=> signOut() : () => signIn()} text={session !== null ? "Logout" : "Login"} />
 

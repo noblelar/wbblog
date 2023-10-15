@@ -1,5 +1,21 @@
+import { Options } from "next/dist/server/base-server";
+
 export interface MenuItem {
-   id: string;
-   label: string;
-   path: string;
+  id: string;
+  label: string;
+  path: string;
+}
+
+export interface Option {
+  value: string;
+  label: string;
+}
+
+export interface FormControlItem {
+  id: string;
+  label: string;
+  placeholder: string;
+  type: string;
+  component: string;
+  options: Option[];
 }
