@@ -81,3 +81,22 @@ export const formControls: FormControlItem[] = [
     options: categories,
   },
 ];
+
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyDD9adqiunPpTWY0yN4JVQYbRhLoMNsvMU",
+  authDomain: "wbblog-mine-2023.firebaseapp.com",
+  projectId: "wbblog-mine-2023",
+  storageBucket: "wbblog-mine-2023.appspot.com",
+  messagingSenderId: "771878105555",
+  appId: "1:771878105555:web:c0d90c569930a880843f26",
+  measurementId: "G-ZJKZESKJ85"
+};
+
+export const initialBlogFormData ={
+  title: '',
+  description: '',
+  image: '',
+  category : '',
+}
+
